@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Connexion - SECURISK VR</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .login-container {
+      max-width: 400px;
+      margin: 80px auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    .login-container h2 {
+      text-align: center;
+      color: var(--primary);
+    }
+    .login-container input {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .login-container button {
+      width: 100%;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Connexion abonnés</h2>
+    <input type="password" id="password" placeholder="Mot de passe" />
+    <button onclick="login()">Se connecter</button>
+    <p id="error" style="color: red; display: none;">Mot de passe incorrect</p>
+  </div>
+
+  <script>
+    function login() {
+      const password = document.getElementById("password").value;
+      if (password === "SST2025") {
+        window.location.href = "scenarios.html";
+      } else {
+        document.getElementById("error").style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
