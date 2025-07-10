@@ -1,24 +1,16 @@
-/* Palette douce et professionnelle */
-:root {
-  --primary: #004e89;
-  --secondary: #79c2d0;
-  --accent: #f7c59f;
-  --light-bg: #f9f9f9;
-  --dark-text: #1c1c1c;
-  --white: #ffffff;
-}
-
+/* Styles globaux */
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: var(--light-bg);
-  color: var(--dark-text);
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f7f8;
+  color: #333;
+  line-height: 1.6;
 }
 
 header {
-  background-color: var(--primary);
+  background-color: #0a3d62;
+  color: white;
   padding: 1rem 2rem;
-  color: var(--white);
 }
 
 .navbar {
@@ -27,94 +19,153 @@ header {
   align-items: center;
 }
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
+.navbar h1 {
+  font-size: 1.8rem;
 }
 
-.navbar a {
-  color: var(--white);
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Section d’accueil */
 .hero {
-  background: url('https://images.unsplash.com/photo-1581093588401-845f263b0e92?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
   height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  color: white;
   position: relative;
-  color: var(--white);
 }
 
 .hero .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(10, 61, 98, 0.6);
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 10px;
+  text-align: center;
 }
 
-.btn {
-  background-color: var(--accent);
-  color: var(--dark-text);
-  padding: 0.8rem 1.2rem;
-  margin-top: 1rem;
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero .btn {
+  background-color: #38ada9;
+  color: white;
+  padding: 0.8rem 1.5rem;
   border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
+  border-radius: 25px;
   text-decoration: none;
+  font-weight: bold;
 }
 
-section {
-  padding: 3rem 2rem;
+.hero .btn:hover {
+  background-color: #079992;
 }
 
-#offres .pricing {
+/* Offres */
+#offres {
+  padding: 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.pricing {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
   justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
 }
 
 .offer {
-  background-color: var(--white);
+  background-color: #dff9fb;
   padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   width: 250px;
 }
 
+.offer h3 {
+  color: #0a3d62;
+  margin-bottom: 1rem;
+}
+
+.offer p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
 .offer button {
-  background-color: var(--secondary);
+  background-color: #0a3d62;
+  color: white;
   border: none;
-  color: var(--white);
-  padding: 0.6rem 1rem;
-  margin-top: 1rem;
-  border-radius: 6px;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
   cursor: pointer;
+}
+
+.offer button:hover {
+  background-color: #3c6382;
+}
+
+/* Scénarios */
+#scenarios {
+  padding: 2rem;
+  background-color: #f1f2f6;
+  text-align: center;
+}
+
+/* Contact */
+#contact {
+  padding: 2rem;
+  background-color: #ffffff;
+  max-width: 600px;
+  margin: auto;
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 500px;
-  margin: auto;
 }
 
 input, textarea {
   padding: 0.8rem;
-  border-radius: 6px;
   border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
+button[type="submit"] {
+  background-color: #0a3d62;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3c6382;
+}
+
+/* Pied de page */
 footer {
-  background-color: var(--primary);
-  color: var(--white);
+  background-color: #0a3d62;
+  color: white;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
